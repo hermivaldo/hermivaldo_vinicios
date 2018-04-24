@@ -12,6 +12,9 @@
 		AC70D7F3208E98A40025287B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC70D7F1208E98A40025287B /* Main.storyboard */; };
 		AC70D7F5208E98A40025287B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC70D7F4208E98A40025287B /* Assets.xcassets */; };
 		AC70D7F8208E98A40025287B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC70D7F6208E98A40025287B /* LaunchScreen.storyboard */; };
+		AC70D801208EBF7F0025287B /* ComprasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70D800208EBF7F0025287B /* ComprasTableViewController.swift */; };
+		AC70D803208EBFBC0025287B /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70D802208EBFBC0025287B /* CadastroViewController.swift */; };
+		AC70D805208EBFE80025287B /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70D804208EBFE80025287B /* TotalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		AC70D7F4208E98A40025287B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC70D7F7208E98A40025287B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC70D7F9208E98A40025287B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC70D800208EBF7F0025287B /* ComprasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTableViewController.swift; sourceTree = "<group>"; };
+		AC70D802208EBFBC0025287B /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		AC70D804208EBFE80025287B /* TotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +61,24 @@
 			isa = PBXGroup;
 			children = (
 				AC70D7ED208E98A40025287B /* AppDelegate.swift */,
-				AC70D7EF208E98A40025287B /* ViewController.swift */,
+				AC70D7FF208EBF010025287B /* Controllers */,
 				AC70D7F1208E98A40025287B /* Main.storyboard */,
 				AC70D7F4208E98A40025287B /* Assets.xcassets */,
 				AC70D7F6208E98A40025287B /* LaunchScreen.storyboard */,
 				AC70D7F9208E98A40025287B /* Info.plist */,
 			);
 			path = hermivaldo_vinicios;
+			sourceTree = "<group>";
+		};
+		AC70D7FF208EBF010025287B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC70D7EF208E98A40025287B /* ViewController.swift */,
+				AC70D800208EBF7F0025287B /* ComprasTableViewController.swift */,
+				AC70D802208EBFBC0025287B /* CadastroViewController.swift */,
+				AC70D804208EBFE80025287B /* TotalViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC70D7F0208E98A40025287B /* ViewController.swift in Sources */,
+				AC70D801208EBF7F0025287B /* ComprasTableViewController.swift in Sources */,
 				AC70D7EE208E98A40025287B /* AppDelegate.swift in Sources */,
+				AC70D805208EBFE80025287B /* TotalViewController.swift in Sources */,
+				AC70D803208EBFBC0025287B /* CadastroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
