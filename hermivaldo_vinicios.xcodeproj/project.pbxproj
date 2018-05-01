@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		753D54A820990B2700790141 /* CDApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 753D54A620990B2700790141 /* CDApp.xcdatamodeld */; };
+		753D54AB2099237400790141 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753D54AA2099237400790141 /* UIViewController+CoreData.swift */; };
 		AC70D7EE208E98A40025287B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70D7ED208E98A40025287B /* AppDelegate.swift */; };
 		AC70D7F0208E98A40025287B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70D7EF208E98A40025287B /* ViewController.swift */; };
 		AC70D7F3208E98A40025287B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC70D7F1208E98A40025287B /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		753D54A720990B2700790141 /* CDApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDApp.xcdatamodel; sourceTree = "<group>"; };
+		753D54AA2099237400790141 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		AC70D7EA208E98A40025287B /* hermivaldo_vinicios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hermivaldo_vinicios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC70D7ED208E98A40025287B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC70D7EF208E98A40025287B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		753D54A92099236100790141 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				753D54AA2099237400790141 /* UIViewController+CoreData.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		AC70D7E1208E98A40025287B = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +72,8 @@
 		AC70D7EC208E98A40025287B /* hermivaldo_vinicios */ = {
 			isa = PBXGroup;
 			children = (
+				753D54A92099236100790141 /* util */,
+				753D54A620990B2700790141 /* CDApp.xcdatamodeld */,
 				AC70D7ED208E98A40025287B /* AppDelegate.swift */,
 				AC70D7FF208EBF010025287B /* Controllers */,
 				AC70D7F1208E98A40025287B /* Main.storyboard */,
@@ -108,7 +122,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = fiap;
 				TargetAttributes = {
 					AC70D7E9208E98A40025287B = {
@@ -153,9 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753D54A820990B2700790141 /* CDApp.xcdatamodeld in Sources */,
 				AC70D7F0208E98A40025287B /* ViewController.swift in Sources */,
 				AC70D801208EBF7F0025287B /* ComprasTableViewController.swift in Sources */,
 				AC70D7EE208E98A40025287B /* AppDelegate.swift in Sources */,
+				753D54AB2099237400790141 /* UIViewController+CoreData.swift in Sources */,
 				AC70D805208EBFE80025287B /* TotalViewController.swift in Sources */,
 				AC70D803208EBFBC0025287B /* CadastroViewController.swift in Sources */,
 			);
@@ -197,6 +213,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -204,6 +221,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -231,7 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -254,6 +272,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -261,6 +280,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -282,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -295,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6A223KBZV7;
 				INFOPLIST_FILE = hermivaldo_vinicios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.hermivaldo.hermivaldo-vinicios";
@@ -309,6 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6A223KBZV7;
 				INFOPLIST_FILE = hermivaldo_vinicios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.hermivaldo.hermivaldo-vinicios";
@@ -340,6 +362,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		753D54A620990B2700790141 /* CDApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				753D54A720990B2700790141 /* CDApp.xcdatamodel */,
+			);
+			currentVersion = 753D54A720990B2700790141 /* CDApp.xcdatamodel */;
+			path = CDApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AC70D7E2208E98A40025287B /* Project object */;
 }

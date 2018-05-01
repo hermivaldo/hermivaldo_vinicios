@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YXD-td-dOK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YXD-td-dOK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,6 +45,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="inputMoney:" destination="BYZ-38-t0r" eventType="editingChanged" id="744-q3-Dl3"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IOF (%): " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyR-Xc-Cfg">
                                 <rect key="frame" x="16" y="129" width="234" height="21"/>
@@ -64,6 +67,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="inputMoney:" destination="BYZ-38-t0r" eventType="editingChanged" id="bgH-gk-s3F"/>
+                                </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cpE-hh-Rpu">
                                 <rect key="frame" x="16" y="237" width="343" height="291"/>
@@ -107,6 +113,9 @@
                                     <constraint firstAttribute="height" constant="30" id="4wM-Fr-58F"/>
                                 </constraints>
                                 <state key="normal" title="Adicionar estado"/>
+                                <connections>
+                                    <action selector="allertAddState:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhJ-NG-H2c"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -139,6 +148,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ajustes" image="settings-2" id="cV8-jz-6jo"/>
+                    <connections>
+                        <outlet property="dolarValue" destination="vkK-dE-0S6" id="yoI-gK-s5a"/>
+                        <outlet property="iofCard" destination="n44-70-NPS" id="ADN-gl-pnw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,6 +163,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YXD-td-dOK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IUy-rZ-dVD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -221,6 +235,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputValue:" destination="tct-oJ-Tiu" eventType="editingDidEnd" id="e95-aq-u0m"/>
+                                </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gift" translatesAutoresizingMaskIntoConstraints="NO" id="XZH-hU-Vaj">
                                 <rect key="frame" x="16" y="142" width="343" height="150"/>
@@ -236,6 +253,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputValue:" destination="tct-oJ-Tiu" eventType="editingDidEnd" id="00B-4y-ynT"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZu-Zs-qOj">
                                 <rect key="frame" x="337" y="312" width="22" height="22"/>
@@ -254,7 +274,10 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="inputMoney:" destination="tct-oJ-Tiu" eventType="editingChanged" id="4Zc-mX-Ceb"/>
+                                </connections>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xhf-CH-ncj">
                                 <rect key="frame" x="312" y="358" width="49" height="31"/>
@@ -273,15 +296,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiI-46-tav">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiI-46-tav">
                                 <rect key="frame" x="16" y="419" width="343" height="55"/>
-                                <color key="backgroundColor" red="0.0" green="0.0357600494" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="L7E-le-QVT"/>
                                 </constraints>
-                                <state key="normal" title="CADASTRAR">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="CADASTRAR"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJe-eg-W1V">
+                                <rect key="frame" x="16" y="142" width="343" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="JYJ-XM-RIo"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="selectImage:" destination="tct-oJ-Tiu" eventType="touchUpInside" id="L4U-zJ-zHm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -289,12 +318,14 @@
                             <constraint firstItem="8IV-Ga-NJO" firstAttribute="leading" secondItem="6oW-Kf-3Z4" secondAttribute="leading" constant="16" id="0Cw-Ah-nbS"/>
                             <constraint firstItem="6oW-Kf-3Z4" firstAttribute="trailing" secondItem="xhf-CH-ncj" secondAttribute="trailing" constant="16" id="0NS-QX-3SE"/>
                             <constraint firstItem="8IV-Ga-NJO" firstAttribute="top" secondItem="XZH-hU-Vaj" secondAttribute="bottom" constant="16" id="60A-bR-iQw"/>
+                            <constraint firstItem="lJe-eg-W1V" firstAttribute="top" secondItem="vmd-QL-IBr" secondAttribute="bottom" constant="30" id="8RO-LT-6Fu"/>
                             <constraint firstItem="Azj-nC-UZc" firstAttribute="top" secondItem="8IV-Ga-NJO" secondAttribute="bottom" constant="30" id="9zH-ZH-6e3"/>
                             <constraint firstItem="xhf-CH-ncj" firstAttribute="leading" secondItem="Azj-nC-UZc" secondAttribute="trailing" constant="8" id="BFI-7u-VoQ"/>
                             <constraint firstItem="0TN-lo-AeP" firstAttribute="leading" secondItem="6oW-Kf-3Z4" secondAttribute="leading" constant="16" id="JIJ-mZ-oc5"/>
                             <constraint firstItem="xhf-CH-ncj" firstAttribute="leading" secondItem="Azj-nC-UZc" secondAttribute="trailing" constant="8" id="NWA-s1-7jt"/>
                             <constraint firstAttribute="trailing" secondItem="XZH-hU-Vaj" secondAttribute="trailing" constant="16" id="U4O-w8-RK9"/>
                             <constraint firstItem="MiI-46-tav" firstAttribute="leading" secondItem="6oW-Kf-3Z4" secondAttribute="leading" constant="16" id="VCD-hz-8Zo"/>
+                            <constraint firstItem="6oW-Kf-3Z4" firstAttribute="trailing" secondItem="lJe-eg-W1V" secondAttribute="trailing" constant="16" id="WQk-jB-1Af"/>
                             <constraint firstItem="XZH-hU-Vaj" firstAttribute="leading" secondItem="6oW-Kf-3Z4" secondAttribute="leading" constant="16" id="Xsa-wH-wHK"/>
                             <constraint firstItem="6oW-Kf-3Z4" firstAttribute="trailing" secondItem="NZu-Zs-qOj" secondAttribute="trailing" constant="16" id="afj-5m-Qrl"/>
                             <constraint firstAttribute="trailing" secondItem="vmd-QL-IBr" secondAttribute="trailing" constant="16" id="bAa-mR-iNu"/>
@@ -308,11 +339,14 @@
                             <constraint firstItem="vmd-QL-IBr" firstAttribute="top" secondItem="6oW-Kf-3Z4" secondAttribute="top" constant="18" id="sub-qp-K32"/>
                             <constraint firstItem="XZH-hU-Vaj" firstAttribute="top" secondItem="vmd-QL-IBr" secondAttribute="bottom" constant="30" id="uq0-Y8-WzQ"/>
                             <constraint firstItem="MiI-46-tav" firstAttribute="top" secondItem="xhf-CH-ncj" secondAttribute="bottom" constant="30" id="vOR-2A-3SO"/>
+                            <constraint firstItem="lJe-eg-W1V" firstAttribute="leading" secondItem="6oW-Kf-3Z4" secondAttribute="leading" constant="16" id="zoi-de-SRY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6oW-Kf-3Z4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastrar Produto" largeTitleDisplayMode="never" id="C1I-1j-T2E"/>
                     <connections>
+                        <outlet property="btSubmit" destination="MiI-46-tav" id="9X0-ag-Rps"/>
+                        <outlet property="ivProduct" destination="XZH-hU-Vaj" id="N82-rD-j5g"/>
                         <outlet property="sCard" destination="xhf-CH-ncj" id="N3w-4c-biB"/>
                         <outlet property="tvPrice" destination="0TN-lo-AeP" id="gwG-0G-g4b"/>
                         <outlet property="tvProdName" destination="vmd-QL-IBr" id="kfz-pR-cED"/>
@@ -321,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8O-Xc-Mt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="25"/>
+            <point key="canvasLocation" x="1901.5999999999999" y="24.7376311844078"/>
         </scene>
         <!--Compras-->
         <scene sceneID="Qjo-Nb-an0">
