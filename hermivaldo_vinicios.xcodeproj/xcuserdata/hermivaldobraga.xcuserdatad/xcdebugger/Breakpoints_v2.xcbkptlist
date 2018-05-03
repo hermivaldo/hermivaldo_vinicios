@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "hermivaldo_vinicios/Controllers/ViewController.swift"
-            timestampString = "546906703.956756"
+            timestampString = "547001000.8644021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "showAlert(type:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "showAlert(type:state:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hermivaldo_vinicios/Controllers/ViewController.swift"
+            timestampString = "547001000.872048"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "showAlert(type:state:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,74 +42,42 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "hermivaldo_vinicios/Controllers/ViewController.swift"
-            timestampString = "546906703.9570301"
+            timestampString = "547001000.872457"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "isMoney(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "hermivaldo_vinicios/Controllers/ViewController.swift"
-            timestampString = "546906703.957184"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "inputMoney(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "hermivaldo_vinicios/Controllers/ViewController.swift"
-            timestampString = "546906703.957291"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "alertTextDidChange(sender:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "hermivaldo_vinicios.ViewController.alertTextDidChange(sender: __ObjC.UITextField) -&gt; ()"
                   moduleName = "hermivaldo_vinicios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hermivaldobraga/Documents/hermivaldo_vinicios/hermivaldo_vinicios/Controllers/ViewController.swift"
-                  timestampString = "546906704.524058"
+                  timestampString = "546995254.146721"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
                   offsetFromSymbolStart = "1716">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "hermivaldo_vinicios.ViewController.alertTextDidChange(sender: __ObjC.UITextField) -&gt; ()"
                   moduleName = "hermivaldo_vinicios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hermivaldobraga/Documents/hermivaldo_vinicios/hermivaldo_vinicios/Controllers/ViewController.swift"
-                  timestampString = "546906704.527288"
+                  timestampString = "546995254.149581"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
                   offsetFromSymbolStart = "2624">
                </Location>
             </Locations>
@@ -106,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "hermivaldo_vinicios/Controllers/CadastroViewController.swift"
-            timestampString = "546906703.957481"
+            timestampString = "546995393.91909"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
@@ -122,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "hermivaldo_vinicios/Controllers/CadastroViewController.swift"
-            timestampString = "546906703.957617"
+            timestampString = "546995393.919181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -138,13 +122,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "hermivaldo_vinicios/Controllers/CadastroViewController.swift"
-            timestampString = "546906703.957778"
+            timestampString = "546995393.919265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "157"
             endingLineNumber = "157"
             landmarkName = "CadastroViewController"
             landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hermivaldo_vinicios/Controllers/ViewController.swift"
+            timestampString = "547001000.872916"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "showAlert(type:state:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hermivaldo_vinicios/Controllers/ViewController.swift"
+            timestampString = "547001000.873228"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "tableView(_:editActionsForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
