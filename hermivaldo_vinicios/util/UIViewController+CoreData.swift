@@ -20,4 +20,12 @@ extension UIViewController {
         return appDelegate.persistentContainer.viewContext
     }
     
+    var currencyFormatter: NumberFormatter{
+        let format = NumberFormatter()
+        format.usesGroupingSeparator = true
+        format.locale = Locale.current
+        format.minimumFractionDigits = 2
+        return format
+    }
+    
 }

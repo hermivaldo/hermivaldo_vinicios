@@ -13,7 +13,7 @@
         <!--Ajustes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hermivaldo_vinicios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SettingsController" customModule="hermivaldo_vinicios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
-                                    <action selector="inputMoney:" destination="BYZ-38-t0r" eventType="editingChanged" id="744-q3-Dl3"/>
+                                    <action selector="dolarChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="3FT-oO-kDE"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IOF (%): " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyR-Xc-Cfg">
@@ -68,7 +68,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
-                                    <action selector="inputMoney:" destination="BYZ-38-t0r" eventType="editingChanged" id="bgH-gk-s3F"/>
+                                    <action selector="iofChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="f82-Qb-5zP"/>
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cpE-hh-Rpu">
@@ -193,6 +193,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tct-oJ-Tiu" kind="show" identifier="linha" id="TH1-IS-6Gg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -296,6 +299,9 @@
                                     <constraint firstAttribute="height" constant="55" id="L7E-le-QVT"/>
                                 </constraints>
                                 <state key="normal" title="CADASTRAR"/>
+                                <connections>
+                                    <action selector="submitProdutct:" destination="tct-oJ-Tiu" eventType="touchUpInside" id="JXA-qm-XQX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJe-eg-W1V">
                                 <rect key="frame" x="16" y="142" width="343" height="150"/>
@@ -337,7 +343,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6oW-Kf-3Z4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cadastrar Produto" largeTitleDisplayMode="never" id="C1I-1j-T2E"/>
+                    <navigationItem key="navigationItem" title="Cadastrar Produto" largeTitleDisplayMode="never" id="C1I-1j-T2E">
+                        <barButtonItem key="leftBarButtonItem" title="Fechar" id="GMP-xe-qzk">
+                            <connections>
+                                <action selector="close:" destination="tct-oJ-Tiu" id="5xA-QL-eI9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btSubmit" destination="MiI-46-tav" id="9X0-ag-Rps"/>
                         <outlet property="ivProduct" destination="XZH-hU-Vaj" id="N82-rD-j5g"/>
@@ -375,10 +387,66 @@
                     <view key="view" contentMode="scaleToFill" id="5ho-bk-ETl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Em U$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUR-Sj-QvM">
+                                <rect key="frame" x="141" y="110" width="93" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bdK-gf-9KT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U$ 987989.979" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1g-IY-CbI">
+                                <rect key="frame" x="126" y="161" width="122" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jry-Ck-Smv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 9879879,98" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyh-u5-crc">
+                                <rect key="frame" x="127" y="323" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CNc-0Q-MfT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total em R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jO-L9-YIa">
+                                <rect key="frame" x="142" y="272" width="91" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6GP-sh-55Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yyh-u5-crc" firstAttribute="top" secondItem="1jO-L9-YIa" secondAttribute="bottom" constant="30" id="3zg-Vp-kJx"/>
+                            <constraint firstItem="W1g-IY-CbI" firstAttribute="top" secondItem="rUR-Sj-QvM" secondAttribute="bottom" constant="30" id="6o7-AS-HTh"/>
+                            <constraint firstItem="yyh-u5-crc" firstAttribute="leading" secondItem="0fx-jE-ZM1" secondAttribute="leading" constant="127" id="9zB-Ya-r4g"/>
+                            <constraint firstItem="0fx-jE-ZM1" firstAttribute="trailing" secondItem="W1g-IY-CbI" secondAttribute="trailing" constant="127" id="DOn-QW-lmg"/>
+                            <constraint firstItem="W1g-IY-CbI" firstAttribute="leading" secondItem="0fx-jE-ZM1" secondAttribute="leading" constant="126" id="JYC-N5-ZuH"/>
+                            <constraint firstItem="1jO-L9-YIa" firstAttribute="leading" secondItem="0fx-jE-ZM1" secondAttribute="leading" constant="142" id="R7K-GM-uon"/>
+                            <constraint firstItem="rUR-Sj-QvM" firstAttribute="top" secondItem="0fx-jE-ZM1" secondAttribute="top" constant="90" id="V8D-bN-Ckr"/>
+                            <constraint firstItem="0fx-jE-ZM1" firstAttribute="trailing" secondItem="yyh-u5-crc" secondAttribute="trailing" constant="127" id="Zgb-ES-10C"/>
+                            <constraint firstItem="0fx-jE-ZM1" firstAttribute="trailing" secondItem="1jO-L9-YIa" secondAttribute="trailing" constant="142" id="hDM-pw-8Uw"/>
+                            <constraint firstItem="rUR-Sj-QvM" firstAttribute="leading" secondItem="0fx-jE-ZM1" secondAttribute="leading" constant="141" id="uho-GK-vXF"/>
+                            <constraint firstItem="0fx-jE-ZM1" firstAttribute="trailing" secondItem="rUR-Sj-QvM" secondAttribute="trailing" constant="141" id="wGe-2y-YTJ"/>
+                            <constraint firstItem="1jO-L9-YIa" firstAttribute="top" secondItem="W1g-IY-CbI" secondAttribute="bottom" constant="90" id="yON-Ax-JAE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0fx-jE-ZM1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Total da Compra" image="wallet-2" id="cMS-d3-Q3j"/>
+                    <connections>
+                        <outlet property="lbFinalR" destination="yyh-u5-crc" id="OAP-fB-f2d"/>
+                        <outlet property="lbFinalU" destination="W1g-IY-CbI" id="Mgy-c0-VLm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHa-k4-zxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,6 +460,7 @@
         <image name="wallet-2" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="TH1-IS-6Gg"/>
         <segue reference="mSS-xE-iSf"/>
     </inferredMetricsTieBreakers>
 </document>

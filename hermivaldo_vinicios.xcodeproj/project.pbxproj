@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		753D54A820990B2700790141 /* CDApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 753D54A620990B2700790141 /* CDApp.xcdatamodeld */; };
 		753D54AB2099237400790141 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753D54AA2099237400790141 /* UIViewController+CoreData.swift */; };
+		75759B63209E023700A7D0D5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75759B62209E023700A7D0D5 /* Settings.bundle */; };
 		AC70D7EE208E98A40025287B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70D7ED208E98A40025287B /* AppDelegate.swift */; };
-		AC70D7F0208E98A40025287B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70D7EF208E98A40025287B /* ViewController.swift */; };
+		AC70D7F0208E98A40025287B /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70D7EF208E98A40025287B /* SettingsController.swift */; };
 		AC70D7F3208E98A40025287B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC70D7F1208E98A40025287B /* Main.storyboard */; };
 		AC70D7F5208E98A40025287B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC70D7F4208E98A40025287B /* Assets.xcassets */; };
 		AC70D7F8208E98A40025287B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC70D7F6208E98A40025287B /* LaunchScreen.storyboard */; };
@@ -22,9 +23,10 @@
 /* Begin PBXFileReference section */
 		753D54A720990B2700790141 /* CDApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDApp.xcdatamodel; sourceTree = "<group>"; };
 		753D54AA2099237400790141 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
+		75759B62209E023700A7D0D5 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AC70D7EA208E98A40025287B /* hermivaldo_vinicios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hermivaldo_vinicios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC70D7ED208E98A40025287B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC70D7EF208E98A40025287B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC70D7EF208E98A40025287B /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		AC70D7F2208E98A40025287B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC70D7F4208E98A40025287B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC70D7F7208E98A40025287B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				AC70D7F4208E98A40025287B /* Assets.xcassets */,
 				AC70D7F6208E98A40025287B /* LaunchScreen.storyboard */,
 				AC70D7F9208E98A40025287B /* Info.plist */,
+				75759B62209E023700A7D0D5 /* Settings.bundle */,
 			);
 			path = hermivaldo_vinicios;
 			sourceTree = "<group>";
@@ -87,7 +90,7 @@
 		AC70D7FF208EBF010025287B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AC70D7EF208E98A40025287B /* ViewController.swift */,
+				AC70D7EF208E98A40025287B /* SettingsController.swift */,
 				AC70D800208EBF7F0025287B /* ComprasTableViewController.swift */,
 				AC70D802208EBFBC0025287B /* CadastroViewController.swift */,
 				AC70D804208EBFE80025287B /* TotalViewController.swift */,
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75759B63209E023700A7D0D5 /* Settings.bundle in Resources */,
 				AC70D7F8208E98A40025287B /* LaunchScreen.storyboard in Resources */,
 				AC70D7F5208E98A40025287B /* Assets.xcassets in Resources */,
 				AC70D7F3208E98A40025287B /* Main.storyboard in Resources */,
@@ -168,7 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				753D54A820990B2700790141 /* CDApp.xcdatamodeld in Sources */,
-				AC70D7F0208E98A40025287B /* ViewController.swift in Sources */,
+				AC70D7F0208E98A40025287B /* SettingsController.swift in Sources */,
 				AC70D801208EBF7F0025287B /* ComprasTableViewController.swift in Sources */,
 				AC70D7EE208E98A40025287B /* AppDelegate.swift in Sources */,
 				753D54AB2099237400790141 /* UIViewController+CoreData.swift in Sources */,

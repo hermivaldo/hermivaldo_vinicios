@@ -14,28 +14,48 @@ enum OperationType {
     case edit
 }
 
-class ViewController: UIViewController {
+class SettingsController: UIViewController {
     
     var alert: UIAlertController?
-    let currencyFormatter =  NumberFormatter()
     var dataSource: [State] = []
+    var product: Product!
     
     @IBOutlet weak var iofCard: UITextField!
     @IBOutlet weak var dolarValue: UITextField!
     @IBOutlet weak var tableViewStates: UITableView!
     
+    
+    @IBAction func dolarChanged(_ sender: UITextField) {
+        if (isMoney(sender)){
+            UserDefaults.standard.set(self.currencyFormatter.number(from: dolarValue.text!), forKey: "dolar")
+        }
+    }
+    
+    @IBAction func iofChanged(_ sender: UITextField) {
+        if (isMoney(sender)){
+         UserDefaults.standard.set(self.currencyFormatter.number(from: iofCard.text!), forKey: "iofCard")
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableViewStates.delegate = self
         self.tableViewStates.dataSource = self
-        
-        currencyFormatter.usesGroupingSeparator = true
-        currencyFormatter.locale = Locale.current
-        currencyFormatter.minimumFractionDigits = 2
-        
+      
+ 
         // Do any additional setup after loading the view, typically from a nib.
         loadState()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let iof = UserDefaults.standard.double(forKey: "iofCard")
+        iofCard.text = self.currencyFormatter.string(from: iof as NSNumber)
+        
+        let dolar = UserDefaults.standard.double(forKey: "dolar")
+        dolarValue.text = self.currencyFormatter.string(from: dolar as NSNumber)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
@@ -59,6 +79,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: - BEGIN METHODS
+    
     
     func showAlert(type: OperationType, state: State?){
         let title = (type == .add) ? "Adicionar" : "Editar"
@@ -138,31 +159,28 @@ class ViewController: UIViewController {
         
     }
     
-    
-    // MARK: - END METHOTDS
-    
-    // MARK: - BEGIN IOBounds
-    
-    
-    
     @IBAction func allertAddState(_ sender: Any) {
         showAlert(type: .add, state: nil)
     }
     
-    // MARK: - END IOBounds
     
 }
 
-extension ViewController : UITableViewDelegate {
+extension SettingsController : UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Excluir") { (action: UITableViewRowAction, indexPath: IndexPath) in
             let state = self.dataSource[indexPath.row]
+            
             self.context.delete(state)
-            try! self.context.save()
-            self.dataSource.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            do {
+                try self.context.save()
+                self.dataSource.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }catch {
+               print(error.localizedDescription)
+            }
         }
         
         let editAction = UITableViewRowAction(style: .normal, title: "Editar") { (action: UITableViewRowAction, indexPath: IndexPath) in
@@ -176,9 +194,14 @@ extension ViewController : UITableViewDelegate {
         return [editAction ,deleteAction]
     }
     
+    
+    
+    
+    
+    
 }
 
-extension ViewController : UITableViewDataSource {
+extension SettingsController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
