@@ -20,15 +20,17 @@ class TotalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dolar = UserDefaults.standard.double(forKey: "dolar")
-        iof = UserDefaults.standard.double(forKey: "iofCard")
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        dolar = UserDefaults.standard.double(forKey: "dolar")
+        iof = UserDefaults.standard.double(forKey: "iofCard")
         loadProduct()
         calcTotal()
     }
     
+
     func calcTotal(){
         var totalU = 0.0
         var totalR = 0.0

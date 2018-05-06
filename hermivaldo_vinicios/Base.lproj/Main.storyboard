@@ -282,6 +282,9 @@
                                     <constraint firstAttribute="height" constant="31" id="Lht-sj-eUD"/>
                                     <constraint firstAttribute="width" constant="47" id="qeT-a4-fKE"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="isCard:" destination="tct-oJ-Tiu" eventType="valueChanged" id="6iJ-m6-jg6"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azj-nC-UZc">
                                 <rect key="frame" x="243.5" y="368" width="60.5" height="21"/>

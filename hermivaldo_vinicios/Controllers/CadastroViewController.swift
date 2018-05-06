@@ -137,6 +137,9 @@ class CadastroViewController: UIViewController {
         
     }
     
+    @IBAction func isCard(_ sender: UISwitch) {
+        enableSubmit()
+    }
     
     @IBAction func submitProdutct(_ sender: Any) {
         if product == nil {
@@ -176,8 +179,12 @@ class CadastroViewController: UIViewController {
         guard let money = sender.text else {
             return false
         }
-        guard let _ = currencyFormatter.number(from: money) else {
+        guard let pay = currencyFormatter.number(from: money) else {
             sender.text = String(money.dropLast())
+            return false
+        }
+    
+        if pay == 0 {
             return false
         }
         return true

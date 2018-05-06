@@ -45,7 +45,7 @@ class SettingsController: UIViewController {
       
  
         // Do any additional setup after loading the view, typically from a nib.
-        loadState()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         
@@ -54,6 +54,7 @@ class SettingsController: UIViewController {
         
         let dolar = UserDefaults.standard.double(forKey: "dolar")
         dolarValue.text = self.currencyFormatter.string(from: dolar as NSNumber)
+        loadState()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -130,20 +131,21 @@ class SettingsController: UIViewController {
         present(alert!, animated: true, completion: nil)
     }
     
-    @IBAction func inputMoney(_ sender: UITextField) {
-        var _ = isMoney(sender)
-    }
-    
     @objc func isMoney(_ sender: UITextField) -> Bool{
         
         guard let money = sender.text else {
             return false
         }
         
-        guard let _ = currencyFormatter.number(from: money) else {
+        guard let pay = currencyFormatter.number(from: money) else {
             sender.text = String(money.dropLast())
             return false
         }
+        
+        if pay == 0 {
+            return false
+        }
+        
         return true
     }
     
